@@ -8,14 +8,12 @@ public class Service {
         }
 
         // Reduzir a soma a um único dígito se necessário
-        if (soma == 11 || soma == 22 || soma == 33) {
-            return soma;
-        } else {
+        if (soma != 11 && soma != 22 && soma != 33) {
             while (soma > 9) {
                 soma = reduzirNumero(soma);
             }
-            return soma;
         }
+        return soma;
     }
 
     public static int getValorNumerico(char letra) {
@@ -35,43 +33,20 @@ public class Service {
         return soma;
     }
 
-    public static String criaMensagemNome(int numeroNome) { // método para deixar mais claro e sucinto
-        String mensagem = "";
-        switch (numeroNome) {
-            case 11:
-                mensagem = "plano espiritual mais alto, intuição, iluminação, um idealista, sonhador.";
-                break;
-            case 22:
-                mensagem = "O Construtor Mestre, grandes empreitadas, força poderosa, liderança.";
-                break;
-            case 1:
-                mensagem = "proatividade, pioneirismo, liderança, independência, realização, individualidade.";
-                break;
-            case 2:
-                mensagem = "cooperação, adaptabilidade, consideração para com os outros, parceria, mediação.";
-                break;
-            case 3:
-                mensagem = "expressão, verbalização, socialização, as artes, a alegria de viver.";
-                break;
-            case 4:
-                mensagem = "fundação, ordem, serviço, esforço contra os limites, crescimento constante.";
-                break;
-            case 5:
-                mensagem = "expansividade, visionário, aventura, uso construtivo da liberdade.";
-                break;
-            case 6:
-                mensagem = "responsabilidade, proteção, criação, comunidade, equilíbrio, simpatia.";
-                break;
-            case 7:
-                mensagem = "análise, compreensão, conhecimento, consciência, estudo, meditação.";
-                break;
-            case 8:
-                mensagem = "iniciativas práticas, orientação para o status, busca pelo poder, objetivos materiais.";
-                break;
-            case 9:
-                mensagem = "humanitário, natureza generosa, altruísmo, obrigações, expressão criativa.";
-                break;
-        }
-        return mensagem;
+    public static String criaMensagemNome(int numeroNome) { // method para deixar mais claro e sucinto
+        return switch (numeroNome) {
+            case 11 -> "plano espiritual mais alto, intuição, iluminação, um idealista, sonhador.";
+            case 22 -> "O Construtor Mestre, grandes empreitadas, força poderosa, liderança.";
+            case 1 -> "proatividade, pioneirismo, liderança, independência, realização, individualidade.";
+            case 2 -> "cooperação, adaptabilidade, consideração para com os outros, parceria, mediação.";
+            case 3 -> "expressão, verbalização, socialização, as artes, a alegria de viver.";
+            case 4 -> "fundação, ordem, serviço, esforço contra os limites, crescimento constante.";
+            case 5 -> "expansividade, visionário, aventura, uso construtivo da liberdade.";
+            case 6 -> "responsabilidade, proteção, criação, comunidade, equilíbrio, simpatia.";
+            case 7 -> "análise, compreensão, conhecimento, consciência, estudo, meditação.";
+            case 8 -> "iniciativas práticas, orientação para o status, busca pelo poder, objetivos materiais.";
+            case 9 -> "humanitário, natureza generosa, altruísmo, obrigações, expressão criativa.";
+            default -> "";
+        };
     }
 }
