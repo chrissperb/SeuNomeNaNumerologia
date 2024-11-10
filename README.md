@@ -35,7 +35,7 @@ classDiagram
 2. **Cálculo do Número:**
 - Conversão das Letras: Cada letra é convertida para um valor numérico de acordo com uma tabela de numerologia.
 - Redução do Número: A soma dos valores das letras é reduzida a um único dígito, exceto para os números mestres 11 e 22.
-5. **Mensagem Interpretativa:** Exibe uma mensagem relacionada ao número resultante, oferecendo uma breve interpretação do valor segundo a numerologia.
+3. **Mensagem Interpretativa:** Exibe uma mensagem relacionada ao número resultante, oferecendo uma breve interpretação do valor segundo a numerologia.
 
 ## Como Usar
 1. Clone o repositório:
